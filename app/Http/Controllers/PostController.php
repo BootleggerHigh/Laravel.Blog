@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     /**
+     *
      * Display a listing of the resource.
      *
      * @param Request $request
@@ -23,24 +24,24 @@ class PostController extends Controller
         else {
             $posts = Post::getAllPosts();
         }
+        if($posts->currentPage() > $posts->lastPage())
+        {
+            return redirect(route('post.index').'/?page='.$posts->lastPage());
+        }
         return view('posts.index', compact('posts'));
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function create()
     {
-        return view('layouts.create');
+        return view('posts.create');
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function store(Request $request)
     {
@@ -49,47 +50,43 @@ class PostController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param \App\Models\Post $post
-     * @return \Illuminate\Http\Response
+     * @param $post
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function show($post)
     {
-
+        $post = Post::getShowPost($post);
+        return view('posts.show',compact('post'));
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param \App\Models\Post $post
-     * @return \Illuminate\Http\Response
+     * @param $post
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function edit(Post $post)
+    public function edit($post)
     {
-        //
+        $post = Post::getShowPost($post);
+        return view('posts.edit',compact('post'));
     }
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Models\Post $post
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request,$id)
     {
-        //
+        Post::updateCurrentPost($request,$id);
+        return redirect()->route('post.show',$id)->with("success","<strong>Пост успешно обновлен.</strong> Перенаправление на обновленный пост успешно завершено.");
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param \App\Models\Post $post
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(Post $post)
+    public function destroy(Request $request)
     {
-        //
+        Post::destroyCurrentPost($request);
+        return redirect()->route('post.index')->with("destroy","<strong>Пост успешно удален.</strong> Перенаправление на главную страницу успешно завершено.");
     }
 }

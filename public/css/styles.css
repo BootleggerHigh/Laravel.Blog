@@ -6,10 +6,6 @@ nav {
     margin-bottom: 15px;
 }
 
-.card {
-    margin-bottom: 10px;
-}
-
 .card-img {
     height: 200px;
     background-position: center center;
@@ -18,6 +14,35 @@ nav {
     background-repeat: no-repeat;
 }
 
-.card-img, .card-author {
+.card, .card-img, .card-author, .card-created_at-date, .card-updated_at-date,.card-text {
     margin-bottom: 10px;
+
+}
+
+.card-img.card-img_max {
+    height: 639px;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+}
+.card-button,.card-button form
+{
+
+    display: flex;
+    margin-right: 10px;
+}
+.card-button a
+{
+    text-align: center;
+    margin-right: 10px;
+}
+.col-6
+{
+    padding-right: 0;
 }

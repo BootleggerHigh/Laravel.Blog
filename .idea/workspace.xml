@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="171d3e60-070c-41f5-aa0d-3fab921235e5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_27_213826_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_27_213826_create_posts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +191,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/posts" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
@@ -203,7 +199,12 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\OSPanel\domains\blog\public\img" />
+      <recent name="C:\OSPanel\domains\blog\resources\views\posts" />
       <recent name="C:\OSPanel\domains\shop\app\Models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OSPanel\domains\blog\resources\views\posts" />
+      <recent name="C:\OSPanel\domains\blog\resources\views\layouts" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Web Page.Unnamed">
@@ -231,7 +232,8 @@
       <updated>1585343145908</updated>
       <workItem from="1585343160077" duration="8294000" />
       <workItem from="1585352391239" duration="4596000" />
-      <workItem from="1585409002281" duration="28601000" />
+      <workItem from="1585409002281" duration="41526000" />
+      <workItem from="1585494384740" duration="7850000" />
     </task>
     <servers />
   </component>
@@ -239,6 +241,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="59" y="182" key="#Log_Highlighting_(ideolog)" timestamp="1585498462577">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="59" y="182" key="#Log_Highlighting_(ideolog)/0.0.1920.1040@0.0.1920.1040" timestamp="1585498462577" />
     <state x="653" y="175" key="#Servers" timestamp="1585352644591">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -255,22 +261,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="146" y="302" key="EditFileWatcherDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585353310597" />
-    <state width="1001" height="275" key="GridCell.Tab.0.bottom" timestamp="1585409336005">
+    <state width="1001" height="275" key="GridCell.Tab.0.bottom" timestamp="1585454275125">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1001" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585409336005" />
-    <state width="1001" height="275" key="GridCell.Tab.0.center" timestamp="1585409336005">
+    <state width="1001" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585454275125" />
+    <state width="1001" height="275" key="GridCell.Tab.0.center" timestamp="1585454275125">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1001" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585409336005" />
-    <state width="1001" height="275" key="GridCell.Tab.0.left" timestamp="1585409336004">
+    <state width="1001" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585454275125" />
+    <state width="1001" height="275" key="GridCell.Tab.0.left" timestamp="1585454275125">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1001" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585409336004" />
-    <state width="1001" height="275" key="GridCell.Tab.0.right" timestamp="1585409336005">
+    <state width="1001" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585454275125" />
+    <state width="1001" height="275" key="GridCell.Tab.0.right" timestamp="1585454275125">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1001" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585409336005" />
+    <state width="1001" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585454275125" />
     <state x="295" y="338" key="NewPhpClassDialog" timestamp="1585411726826">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -283,10 +289,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="515" y="413" width="326" height="234" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040@0.0.1920.1040" timestamp="1585345965075" />
-    <state x="811" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1585409026763">
+    <state x="811" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1585494467505">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="811" y="369" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585409026763" />
+    <state x="811" y="369" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585494467505" />
     <state x="179" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1585426398154">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

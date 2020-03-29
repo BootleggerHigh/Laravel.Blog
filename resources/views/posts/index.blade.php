@@ -1,12 +1,11 @@
-@extends('layouts.layout')
-@section('title','Главная страница')
+@extends('posts.layout',['title'=>'Главная страница'])
 @section('content')
     @if(isset($_GET['search']))
         @if(!count($posts))
-            <h2>Результат поиска {{$_GET['search']}} ничего не найдено </h2>
+            <h2>По запросу <strong>{{$_GET['search']}}</strong> ничего не найдено </h2>
             <a href="{{route('post.index')}}" class="btn btn-outline-success">Отобразить все посты</a>
         @else
-            <h2>Результат поиска {{$_GET['search']}} найдено {{$posts->total()}}</h2>
+            <h2>Результатов: {{$_GET['search']}} найдено {{$posts->total()}}</h2>
         @endif
     @endif
     <div class="row">
@@ -21,7 +20,7 @@
                         <div class="card-author">
                             Автор: {{$post->users->name}}
                         </div>
-                        <a href="#" class="btn btn-outline-dark">
+                        <a href="{{route('post.show',$post->post_id)}}" class="btn btn-outline-dark">
                             Посмотреть пост
                         </a>
                     </div>
