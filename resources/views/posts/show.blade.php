@@ -5,6 +5,8 @@
             <div class="card-header"><h2>{{$post->title}}</h2>
                 <div class="card-button">
                     <a href="{{route('post.index')}}" class="btn btn-success">На главную</a>
+                    @auth()
+                        @if(Auth::user()->id === $post->author_id)
                     <a href="{{route('post.edit',$post->post_id)}}" class="btn btn-warning">Редактировать пост</a>
                     <form action="{{route('post.destroy',$post->post_id)}}" method="POST"
                           onsubmit="if (confirm('Вы уверены,что стоит удалить данный пост?'))
@@ -14,6 +16,8 @@
                         <input type="hidden" name="id" value="{{$post->post_id}}">
                         <input type="submit" class="btn btn-danger"  value="Удалить пост">
                     </form>
+                            @endif
+                        @endauth
                 </div>
             </div>
             <div class="card-body">

@@ -46,3 +46,7 @@ nav {
 {
     padding-right: 0;
 }
+#sticky-footer {
+    width: 100%;
+    margin-top: 400px;
+}

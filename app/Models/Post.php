@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use App\User;
-use http\Env\Request;
+use Auth;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -98,7 +98,7 @@ class Post extends Model
         $model->descr = $request->description;
         if($update === 0)
         {
-            $model->author_id = rand(1,4);
+            $model->author_id = Auth::user()->id;
         }
         if ($request->file('img')) {
             if($update === 1)

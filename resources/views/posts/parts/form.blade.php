@@ -1,13 +1,13 @@
 <div class="form-group">
     <label for="exampleFormControlInput1">Заголовок для поста</label>
     <input type="text" class="form-control" id="exampleFormControlInput1" name="title"
-           placeholder="Введите заголовок поста" value="{{$post->title ?? ''}}">
+           placeholder="Введите заголовок поста" value="{{old('title')??$post->title ?? ''}}">
 </div>
 
 <div class="form-group">
     <label for="exampleFormControlTextarea1">Основной текст поста</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Введите текст поста"
-              name="description" rows="3">{{$post->descr ?? ''}}</textarea>
+              name="description" rows="3">{{old('description')??$post->descr ?? ''}}</textarea>
 </div>
 <div class="form-group">
     <label for="inputGroupFile01">Загрузить картинку для поста</label>

@@ -1,5 +1,6 @@
 @extends('posts.layout',['title'=>'Создание поста'])
 @section('content')
+    @include('posts.errors.errors-form')
     <form action="{{route('post.store')}}" method="post" enctype="multipart/form-data">
         @csrf
         <h3>Создание поста</h3>

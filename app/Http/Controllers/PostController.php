@@ -2,11 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PostRequest;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('check.post',['only'=>['update','destroy']]);
+        $this->middleware('auth',['only'=>['create']]);
+    }
+
     /**
      *
      * Display a listing of the resource.
@@ -40,10 +48,10 @@ class PostController extends Controller
     }
 
     /**
-     * @param Request $request
+     * @param PostRequest $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
         Post::createPost($request);
         return redirect(route('post.index'))->with("success","<strong>Пост успешно создан.</strong> Перенаправление на главную страницу успешно завершено.");
@@ -70,11 +78,11 @@ class PostController extends Controller
     }
 
     /**
-     * @param Request $request
+     * @param PostRequest $request
      * @param $id
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(Request $request,$id)
+    public function update(PostRequest $request,$id)
     {
         Post::updateCurrentPost($request,$id);
         return redirect()->route('post.show',$id)->with("success","<strong>Пост успешно обновлен.</strong> Перенаправление на обновленный пост успешно завершено.");
@@ -84,7 +92,7 @@ class PostController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(Request $request)
+    public function destroy(PostRequest $request)
     {
         Post::destroyCurrentPost($request);
         return redirect()->route('post.index')->with("destroy","<strong>Пост успешно удален.</strong> Перенаправление на главную страницу успешно завершено.");
