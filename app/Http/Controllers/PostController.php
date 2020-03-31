@@ -12,7 +12,7 @@ class PostController extends Controller
     public function __construct()
     {
         $this->middleware('check.post',['only'=>['update','destroy']]);
-        $this->middleware('auth',['only'=>['create']]);
+        $this->middleware(['auth','verified'],['only'=>['create']]);
     }
 
     /**

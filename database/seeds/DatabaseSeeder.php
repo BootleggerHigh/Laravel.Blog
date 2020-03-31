@@ -1,6 +1,6 @@
 <?php
 
-use App\Post;
+use App\Models\Post;
 use App\User;
 use Illuminate\Database\Seeder;
 

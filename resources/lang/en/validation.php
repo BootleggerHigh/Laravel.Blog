@@ -146,6 +146,6 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => ['g-recaptcha-response' => 'Для продолжения нужно пройти капчу'],
 
 ];

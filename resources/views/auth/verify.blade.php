@@ -15,7 +15,7 @@
                     @endif
 
                     {{ __('Прежде чем продолжить, проверьте свою электронную почту на наличие ссылки для подтверждения.') }}
-                    {{ __('Не получили письмо?') }},
+                    {{ __('Не получили письмо?') }}
                     <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
                         @csrf
                         <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ __('запросить ещё раз') }}</button>.
