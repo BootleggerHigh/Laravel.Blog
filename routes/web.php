@@ -12,6 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/',function ()
+{
+   return redirect(\route('post.index'));
+});
 Route::resource('post','PostController');
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Auth::routes(['verify' => true]);
